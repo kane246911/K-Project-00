@@ -38,6 +38,7 @@ sheet['D1'] = '連絡先①'
 sheet['E1'] = 'メールアドレス①'
 sheet['F1'] = '作成日'
 
+path = r"C:/Users/user/OneDrive/デスクトップ/"
 book.save(file_name)
 
 
