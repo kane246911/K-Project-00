@@ -24,6 +24,7 @@ st.markdown('・「パート給与計算」・・・アプリを使用した打�
 #--------------------------------------------------------------------------
 #エクセルファイルが無ければ作る
 file_name = '新規のデータベース.xlsx'
+path = r"C:/Users/user/OneDrive/デスクトップ/"
 if os.path.exists(file_name) == False:
     book = openpyxl.Workbook()
     book.save(file_name)
@@ -38,7 +39,6 @@ sheet['D1'] = '連絡先①'
 sheet['E1'] = 'メールアドレス①'
 sheet['F1'] = '作成日'
 
-path = r"C:/Users/user/OneDrive/デスクトップ/"
 book.save(file_name)
 
 
@@ -70,14 +70,13 @@ with st.form(key = 'profile_form'):
         print({name},{age},{adress},{phone1},{mail})
 
 #--------------------------------------------------------------------------
-#エクセルファイルに書き込むために変数を整理
-        
-
 #時間を2020/1/1のようにスラッシュで区切る
         time = datetime.datetime.now()
         today = str(time.year) + '/' + str(time.month) + '/' + str(time.day) + '/' + str(time.hour)+ ':' + str(time.minute)+ '_' + str(time.second) 
 
 #--------------------------------------------------------------------------
+#エクセルファイルに書き込むために変数を整理
+        
         book = openpyxl.load_workbook(file_name)
         row = sheet.max_row +1
         sheet = book['Sheet']
