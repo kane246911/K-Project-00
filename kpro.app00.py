@@ -9,7 +9,7 @@ import time
 #--------------------------------------------------------------------------
 #Web画面の定義
 
-st.image("k-pro_logo.png",width=400)
+st.image("k-pro_logo.png",width=500)
 #st.title('K-Project')
 st.header('「スキマプログラム」を活用して業務自動化・時短化を実現！')
 st.subheader('「スキマプログラム」とは？')
